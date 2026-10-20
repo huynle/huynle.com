@@ -22,8 +22,8 @@ const { Content } = await render(project);
   <article class="wrap article">
     <header class="article__head">
       <p class="kicker mono">
-        <a href="/projects/">Projects</a> <span aria-hidden="true">/</span>
-        <Status status={project.data.status} /> <span aria-hidden="true">·</span>
+        <a href="/projects/">Projects</a> <span class="sep" aria-hidden="true">/</span>
+        <Status status={project.data.status} /> <span class="sep" aria-hidden="true">·</span>
         updated <FormattedDate date={project.data.updated} />
       </p>
       <h1 class="article__title">{project.data.title}</h1>

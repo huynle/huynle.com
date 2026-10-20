@@ -23,8 +23,8 @@ const minutes = readingTime(post.body ?? '');
   <article class="wrap article">
     <header class="article__head">
       <p class="kicker mono">
-        <a href="/posts/">Writing</a> <span aria-hidden="true">/</span>
-        <FormattedDate date={post.data.date} /> <span aria-hidden="true">·</span>
+        <a href="/posts/">Writing</a> <span class="sep" aria-hidden="true">/</span>
+        <FormattedDate date={post.data.date} /> <span class="sep" aria-hidden="true">·</span>
         {minutes} min read
       </p>
       <h1 class="article__title">{post.data.title}</h1>

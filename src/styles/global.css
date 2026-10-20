@@ -41,6 +41,7 @@
   --space-xl: clamp(3.5rem, 2.5rem + 4vw, 7rem);
 
   --measure: 68ch;
+  --column: 40rem; /* ~68ch of body text; rem so mono children don't shrink it */
   --wrap: 78rem;
   --gutter: clamp(1.25rem, 0.8rem + 2vw, 2.5rem);
   --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
@@ -284,6 +285,17 @@ a:hover {
 
 .kicker a {
   text-decoration: none;
+}
+
+.kicker .sep {
+  margin-inline: 0.55em;
+  color: var(--rule);
+}
+
+@media (prefers-color-scheme: dark) {
+  .kicker .sep {
+    color: var(--muted);
+  }
 }
 
 .kicker a:hover {
@@ -633,7 +645,7 @@ a:hover {
 .article__body,
 .article__foot,
 .links {
-  max-width: var(--measure);
+  max-width: var(--column);
   margin-inline: auto;
 }
 
@@ -695,7 +707,7 @@ a:hover {
 
 /* ---------- Prose ---------- */
 .prose {
-  max-width: var(--measure);
+  max-width: var(--column);
   counter-reset: h2;
 }
 
