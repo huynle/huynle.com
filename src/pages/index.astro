@@ -1,0 +1,49 @@
+---
+import { render } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import SectionLabel from '../components/SectionLabel.astro';
+import ProjectList from '../components/ProjectList.astro';
+import PostList from '../components/PostList.astro';
+import FormattedDate from '../components/FormattedDate.astro';
+import { getNow, getPosts, getProjects } from '../lib/collections';
+
+const [now, projects, posts] = await Promise.all([getNow(), getProjects(), getPosts()]);
+const { Content: NowContent } = await render(now);
+const latest = posts.slice(0, 5);
+---
+
+<Base>
+  <section class="hero" aria-labelledby="intro">
+    <div class="wrap">
+      <p class="kicker mono">Field notes — Huy Le</p>
+      <h1 id="intro" class="hero__title">
+        Huy Le builds <em>hardware</em> and <em>software</em>, and keeps a notebook of both.
+      </h1>
+      <p class="hero__lede">
+        Circuits on the bench, code in the terminal, and the occasional write-up when something works (or doesn't).
+      </p>
+    </div>
+  </section>
+
+  <section class="wrap section" aria-labelledby="now-title">
+    <SectionLabel n="01" label="Now" id="now-title" href="/now/" linkLabel="More" />
+    <div class="section__body">
+      <div class="prose prose--lead"><NowContent /></div>
+      <p class="meta mono muted">updated <FormattedDate date={now.data.updated} /></p>
+    </div>
+  </section>
+
+  <section class="wrap section" aria-labelledby="projects-title">
+    <SectionLabel n="02" label="Projects" id="projects-title" href="/projects/" linkLabel="Index" />
+    <div class="section__body">
+      <ProjectList projects={projects} />
+    </div>
+  </section>
+
+  <section class="wrap section" aria-labelledby="writing-title">
+    <SectionLabel n="03" label="Writing" id="writing-title" href="/posts/" linkLabel="Archive" />
+    <div class="section__body">
+      {latest.length > 0 ? <PostList posts={latest} /> : <p class="muted">Nothing published yet.</p>}
+    </div>
+  </section>
+</Base>

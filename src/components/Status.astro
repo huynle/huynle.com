@@ -1,0 +1,10 @@
+---
+import type { ProjectStatus } from '../lib/content';
+
+interface Props {
+  status: ProjectStatus;
+}
+const { status } = Astro.props;
+---
+
+<span class:list={['status', `status--${status}`]}><span class="status__dot" aria-hidden="true"></span>{status}</span>

@@ -1,0 +1,24 @@
+---
+import { render } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import FormattedDate from '../components/FormattedDate.astro';
+import { getNow } from '../lib/collections';
+
+const now = await getNow();
+const { Content } = await render(now);
+---
+
+<Base title="Now" description="What Huy Le is focused on right now.">
+  <header class="wrap page-head">
+    <p class="kicker mono">01 — Now · updated <FormattedDate date={now.data.updated} /></p>
+    <h1 class="page-head__title">Now</h1>
+    <p class="page-head__lede">
+      A short snapshot of what I'm focused on, in the spirit of <a href="https://nownownow.com/about">now pages</a>.
+    </p>
+  </header>
+  <section class="wrap section" aria-label="Snapshot">
+    <div class="section__body section__body--full prose prose--lead">
+      <Content />
+    </div>
+  </section>
+</Base>

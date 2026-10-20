@@ -1,0 +1,24 @@
+---
+import Base from '../layouts/Base.astro';
+import { GITHUB_URL } from '../consts';
+---
+
+<Base title="About" description="About Huy Le, a builder of hardware and software.">
+  <header class="wrap page-head">
+    <p class="kicker mono">04 — About</p>
+    <h1 class="page-head__title">About</h1>
+  </header>
+  <section class="wrap section" aria-label="About Huy Le">
+    <div class="section__body section__body--full prose prose--lead">
+      <p>
+        I'm Huy Le. I build things on both sides of the hardware/software line: boards and bench instruments, the
+        firmware that runs on them, and the tools and infrastructure around them.
+      </p>
+      <p>
+        This site is my public notebook: a <a href="/now/">Now</a> snapshot, an index of <a href="/projects/">projects</a>,
+        and occasional <a href="/posts/">writing</a>. Placeholder copy; a proper introduction is coming.
+      </p>
+      <p>Code lives on <a href={GITHUB_URL} rel="me">GitHub</a>.</p>
+    </div>
+  </section>
+</Base>

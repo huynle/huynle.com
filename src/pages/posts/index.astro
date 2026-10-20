@@ -1,0 +1,22 @@
+---
+import Base from '../../layouts/Base.astro';
+import SectionLabel from '../../components/SectionLabel.astro';
+import PostList from '../../components/PostList.astro';
+import { getPosts } from '../../lib/collections';
+
+const posts = await getPosts();
+---
+
+<Base title="Writing" description="Notes and write-ups by Huy Le on hardware and software projects.">
+  <header class="wrap page-head">
+    <p class="kicker mono">03 — Writing</p>
+    <h1 class="page-head__title">Writing</h1>
+    <p class="page-head__lede">Longer notes from the bench and the terminal. Also available as <a href="/rss.xml">RSS</a>.</p>
+  </header>
+  <section class="wrap section" aria-labelledby="all-posts">
+    <SectionLabel n={String(posts.length).padStart(2, '0')} label="Entries" id="all-posts" />
+    <div class="section__body">
+      <PostList posts={posts} showSummary />
+    </div>
+  </section>
+</Base>

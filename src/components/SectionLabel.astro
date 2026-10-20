@@ -1,0 +1,15 @@
+---
+interface Props {
+  n: string;
+  label: string;
+  id?: string;
+  href?: string;
+  linkLabel?: string;
+}
+const { n, label, id, href, linkLabel } = Astro.props;
+---
+
+<div class="section-label">
+  <h2 id={id} class="section-label__title"><span class="section-label__n">{n}</span> — {label}</h2>
+  {href && <a class="section-label__more" href={href}>{linkLabel ?? 'All'} <span aria-hidden="true">→</span></a>}
+</div>

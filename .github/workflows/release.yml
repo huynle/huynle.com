@@ -1,0 +1,17 @@
+name: Release
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  packages: write
+
+jobs:
+  release-image:
+    name: Release production image
+    uses: huynle/.github/.github/workflows/container-release.yml@v1
+    with:
+      image: ghcr.io/huynle/huynle.com
