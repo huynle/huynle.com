@@ -14,7 +14,8 @@
     "test": "vitest run",
     "verify:dist": "node scripts/verify-dist.mjs dist",
     "check:links": "node scripts/check-links.mjs dist",
-    "astro": "astro"
+    "astro": "astro",
+    "brain:export": "node scripts/brain-export.ts"
   },
   "dependencies": {
     "@astrojs/mdx": "^8.1.0",

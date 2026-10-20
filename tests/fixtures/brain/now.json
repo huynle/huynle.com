@@ -1,0 +1,39 @@
+{
+  "entries": [
+    {
+      "id": "now00001",
+      "path": "projects/site-operations/walkthrough/now00001.md",
+      "title": "Now (old)",
+      "type": "walkthrough",
+      "status": "active",
+      "content": "Old snapshot.\n",
+      "tags": [
+        "public",
+        "site-now"
+      ],
+      "embedding_status": "current",
+      "project_id": "site-operations",
+      "created": "2026-10-01T08:00:00Z",
+      "modified": "2026-09-01T00:00:00Z"
+    },
+    {
+      "id": "now00002",
+      "path": "projects/site-operations/walkthrough/now00002.md",
+      "title": "Now",
+      "type": "walkthrough",
+      "status": "active",
+      "content": "# Now\n\nBuilding the new site.\n\nAlso soldering.\n",
+      "tags": [
+        "public",
+        "site-now"
+      ],
+      "embedding_status": "current",
+      "project_id": "site-operations",
+      "created": "2026-10-01T08:00:00Z",
+      "modified": "2026-10-19T07:00:00Z"
+    }
+  ],
+  "total": 2,
+  "limit": 100,
+  "offset": 0
+}

@@ -1,0 +1,306 @@
+[
+  {
+    "rule": "private-ipv4",
+    "entry": {
+      "id": "leak0000",
+      "path": "projects/site-operations/walkthrough/leak0000.md",
+      "title": "Project: Leak 0",
+      "type": "walkthrough",
+      "status": "active",
+      "content": "Fine summary.\n\nRuns at 192.168.1.20 on the LAN.\n",
+      "tags": [
+        "public",
+        "site-project"
+      ],
+      "embedding_status": "current",
+      "project_id": "site-operations",
+      "created": "2026-10-01T08:00:00Z",
+      "modified": "2026-10-01T00:00:00Z"
+    }
+  },
+  {
+    "rule": "private-ipv4",
+    "entry": {
+      "id": "leak0001",
+      "path": "projects/site-operations/walkthrough/leak0001.md",
+      "title": "Project: Leak 1",
+      "type": "walkthrough",
+      "status": "active",
+      "content": "Fine summary.\n\nBox 10.0.12.4.\n",
+      "tags": [
+        "public",
+        "site-project"
+      ],
+      "embedding_status": "current",
+      "project_id": "site-operations",
+      "created": "2026-10-01T08:00:00Z",
+      "modified": "2026-10-01T00:00:00Z"
+    }
+  },
+  {
+    "rule": "private-ipv4",
+    "entry": {
+      "id": "leak0002",
+      "path": "projects/site-operations/walkthrough/leak0002.md",
+      "title": "Project: Leak 2",
+      "type": "walkthrough",
+      "status": "active",
+      "content": "Fine summary.\n\nGateway 172.20.1.1.\n",
+      "tags": [
+        "public",
+        "site-project"
+      ],
+      "embedding_status": "current",
+      "project_id": "site-operations",
+      "created": "2026-10-01T08:00:00Z",
+      "modified": "2026-10-01T00:00:00Z"
+    }
+  },
+  {
+    "rule": "cgnat-ipv4",
+    "entry": {
+      "id": "leak0003",
+      "path": "projects/site-operations/walkthrough/leak0003.md",
+      "title": "Project: Leak 3",
+      "type": "walkthrough",
+      "status": "active",
+      "content": "Fine summary.\n\nTailscale 100.101.102.103 node.\n",
+      "tags": [
+        "public",
+        "site-project"
+      ],
+      "embedding_status": "current",
+      "project_id": "site-operations",
+      "created": "2026-10-01T08:00:00Z",
+      "modified": "2026-10-01T00:00:00Z"
+    }
+  },
+  {
+    "rule": "tailnet-host",
+    "entry": {
+      "id": "leak0004",
+      "path": "projects/site-operations/walkthrough/leak0004.md",
+      "title": "Project: Leak 4",
+      "type": "walkthrough",
+      "status": "active",
+      "content": "Fine summary.\n\nssh amos.tail1234.ts.net\n",
+      "tags": [
+        "public",
+        "site-project"
+      ],
+      "embedding_status": "current",
+      "project_id": "site-operations",
+      "created": "2026-10-01T08:00:00Z",
+      "modified": "2026-10-01T00:00:00Z"
+    }
+  },
+  {
+    "rule": "internal-host",
+    "entry": {
+      "id": "leak0005",
+      "path": "projects/site-operations/walkthrough/leak0005.md",
+      "title": "Project: Leak 5",
+      "type": "walkthrough",
+      "status": "active",
+      "content": "Fine summary.\n\nopen http://nas.local/\n",
+      "tags": [
+        "public",
+        "site-project"
+      ],
+      "embedding_status": "current",
+      "project_id": "site-operations",
+      "created": "2026-10-01T08:00:00Z",
+      "modified": "2026-10-01T00:00:00Z"
+    }
+  },
+  {
+    "rule": "internal-host",
+    "entry": {
+      "id": "leak0006",
+      "path": "projects/site-operations/walkthrough/leak0006.md",
+      "title": "Project: Leak 6",
+      "type": "walkthrough",
+      "status": "active",
+      "content": "Fine summary.\n\nprinter.lan is up\n",
+      "tags": [
+        "public",
+        "site-project"
+      ],
+      "embedding_status": "current",
+      "project_id": "site-operations",
+      "created": "2026-10-01T08:00:00Z",
+      "modified": "2026-10-01T00:00:00Z"
+    }
+  },
+  {
+    "rule": "internal-host",
+    "entry": {
+      "id": "leak0007",
+      "path": "projects/site-operations/walkthrough/leak0007.md",
+      "title": "Project: Leak 7",
+      "type": "walkthrough",
+      "status": "active",
+      "content": "Fine summary.\n\nsee wiki.corp.internal\n",
+      "tags": [
+        "public",
+        "site-project"
+      ],
+      "embedding_status": "current",
+      "project_id": "site-operations",
+      "created": "2026-10-01T08:00:00Z",
+      "modified": "2026-10-01T00:00:00Z"
+    }
+  },
+  {
+    "rule": "email",
+    "entry": {
+      "id": "leak0008",
+      "path": "projects/site-operations/walkthrough/leak0008.md",
+      "title": "Project: Leak 8",
+      "type": "walkthrough",
+      "status": "active",
+      "content": "Fine summary.\n\nmail someone@example.com\n",
+      "tags": [
+        "public",
+        "site-project"
+      ],
+      "embedding_status": "current",
+      "project_id": "site-operations",
+      "created": "2026-10-01T08:00:00Z",
+      "modified": "2026-10-01T00:00:00Z"
+    }
+  },
+  {
+    "rule": "token",
+    "entry": {
+      "id": "leak0009",
+      "path": "projects/site-operations/walkthrough/leak0009.md",
+      "title": "Project: Leak 9",
+      "type": "walkthrough",
+      "status": "active",
+      "content": "Fine summary.\n\n{{GHP}}\n",
+      "tags": [
+        "public",
+        "site-project"
+      ],
+      "embedding_status": "current",
+      "project_id": "site-operations",
+      "created": "2026-10-01T08:00:00Z",
+      "modified": "2026-10-01T00:00:00Z"
+    }
+  },
+  {
+    "rule": "token",
+    "entry": {
+      "id": "leak0010",
+      "path": "projects/site-operations/walkthrough/leak0010.md",
+      "title": "Project: Leak 10",
+      "type": "walkthrough",
+      "status": "active",
+      "content": "Fine summary.\n\n{{SK}}\n",
+      "tags": [
+        "public",
+        "site-project"
+      ],
+      "embedding_status": "current",
+      "project_id": "site-operations",
+      "created": "2026-10-01T08:00:00Z",
+      "modified": "2026-10-01T00:00:00Z"
+    }
+  },
+  {
+    "rule": "token",
+    "entry": {
+      "id": "leak0011",
+      "path": "projects/site-operations/walkthrough/leak0011.md",
+      "title": "Project: Leak 11",
+      "type": "walkthrough",
+      "status": "active",
+      "content": "Fine summary.\n\n{{AKIA}}\n",
+      "tags": [
+        "public",
+        "site-project"
+      ],
+      "embedding_status": "current",
+      "project_id": "site-operations",
+      "created": "2026-10-01T08:00:00Z",
+      "modified": "2026-10-01T00:00:00Z"
+    }
+  },
+  {
+    "rule": "token",
+    "entry": {
+      "id": "leak0012",
+      "path": "projects/site-operations/walkthrough/leak0012.md",
+      "title": "Project: Leak 12",
+      "type": "walkthrough",
+      "status": "active",
+      "content": "Fine summary.\n\n{{XOXB}}\n",
+      "tags": [
+        "public",
+        "site-project"
+      ],
+      "embedding_status": "current",
+      "project_id": "site-operations",
+      "created": "2026-10-01T08:00:00Z",
+      "modified": "2026-10-01T00:00:00Z"
+    }
+  },
+  {
+    "rule": "private-key",
+    "entry": {
+      "id": "leak0013",
+      "path": "projects/site-operations/walkthrough/leak0013.md",
+      "title": "Project: Leak 13",
+      "type": "walkthrough",
+      "status": "active",
+      "content": "Fine summary.\n\n{{PEM}}\n",
+      "tags": [
+        "public",
+        "site-project"
+      ],
+      "embedding_status": "current",
+      "project_id": "site-operations",
+      "created": "2026-10-01T08:00:00Z",
+      "modified": "2026-10-01T00:00:00Z"
+    }
+  },
+  {
+    "rule": "secret-assignment",
+    "entry": {
+      "id": "leak0014",
+      "path": "projects/site-operations/walkthrough/leak0014.md",
+      "title": "Project: Leak 14",
+      "type": "walkthrough",
+      "status": "active",
+      "content": "Fine summary.\n\napi_key = {{HEX40}}\n",
+      "tags": [
+        "public",
+        "site-project"
+      ],
+      "embedding_status": "current",
+      "project_id": "site-operations",
+      "created": "2026-10-01T08:00:00Z",
+      "modified": "2026-10-01T00:00:00Z"
+    }
+  },
+  {
+    "rule": "secret-assignment",
+    "entry": {
+      "id": "leak0015",
+      "path": "projects/site-operations/walkthrough/leak0015.md",
+      "title": "Project: Leak 15",
+      "type": "walkthrough",
+      "status": "active",
+      "content": "Fine summary.\n\ntoken: {{B64}}\n",
+      "tags": [
+        "public",
+        "site-project"
+      ],
+      "embedding_status": "current",
+      "project_id": "site-operations",
+      "created": "2026-10-01T08:00:00Z",
+      "modified": "2026-10-01T00:00:00Z"
+    }
+  }
+]

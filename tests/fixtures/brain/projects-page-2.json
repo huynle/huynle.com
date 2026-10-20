@@ -1,0 +1,39 @@
+{
+  "entries": [
+    {
+      "id": "i9j0k1l2",
+      "path": "projects/hardware/walkthrough/i9j0k1l2.md",
+      "title": "Shipped Widget",
+      "type": "walkthrough",
+      "status": "completed",
+      "content": "A widget that **shipped** with [docs](https://example.org/docs).\n\n![Wiring diagram](attachment:att00001)\n\nSee also ![photo](https://brain.huynle.com/api/v1/attachments/att00002/content?project_id=hardware).\n",
+      "tags": [
+        "public",
+        "site-project"
+      ],
+      "embedding_status": "current",
+      "project_id": "hardware",
+      "created": "2026-10-01T08:00:00Z",
+      "modified": "2026-10-10T12:30:00Z"
+    },
+    {
+      "id": "m3n4o5p6",
+      "path": "projects/site-operations/walkthrough/m3n4o5p6.md",
+      "title": "Project: Paused Gadget",
+      "type": "walkthrough",
+      "status": "blocked",
+      "content": "Waiting on parts.\n",
+      "tags": [
+        "public",
+        "site-project"
+      ],
+      "embedding_status": "current",
+      "project_id": "site-operations",
+      "created": "2026-10-01T08:00:00Z",
+      "modified": "2026-08-15T09:00:00Z"
+    }
+  ],
+  "total": 2,
+  "limit": 2,
+  "offset": 2
+}

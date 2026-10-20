@@ -4,6 +4,7 @@ on:
   pull_request:
   push:
     branches-ignore: [main]
+  workflow_dispatch: # brain-sync.yml dispatches this on its branch (GITHUB_TOKEN pushes don't trigger push/PR events)
 
 permissions:
   contents: read
