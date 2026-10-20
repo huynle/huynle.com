@@ -35,3 +35,18 @@ export function readingTime(markdown: string): number {
   const words = prose.split(/\s+/).filter(Boolean).length;
   return Math.max(1, Math.round(words / WORDS_PER_MINUTE));
 }
+
+export type ProjectStatus = 'active' | 'paused' | 'shipped';
+const STATUS_RANK: Record<ProjectStatus, number> = { active: 0, paused: 1, shipped: 2 };
+
+/** Active work first, then paused, then shipped; newest update first within a status; id breaks ties. */
+export function byProjectOrder(
+  a: { id: string; data: { status: ProjectStatus; updated: Date } },
+  b: { id: string; data: { status: ProjectStatus; updated: Date } },
+): number {
+  return (
+    STATUS_RANK[a.data.status] - STATUS_RANK[b.data.status] ||
+    b.data.updated.getTime() - a.data.updated.getTime() ||
+    a.id.localeCompare(b.id)
+  );
+}

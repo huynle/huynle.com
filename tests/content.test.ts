@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { byDateDesc, formatDate, isoDate, isPublished, readingTime } from '../src/lib/content';
+import { byDateDesc, byProjectOrder, formatDate, isoDate, isPublished, readingTime } from '../src/lib/content';
 
 describe('isPublished', () => {
   it('keeps drafts out of production builds', () => {
@@ -55,5 +55,26 @@ describe('readingTime', () => {
     const words = Array.from({ length: 660 }, () => 'word').join(' ');
     const code = '```sh\n' + Array.from({ length: 500 }, () => 'x').join(' ') + '\n```';
     expect(readingTime(`# Title\n\n${words}\n\n${code}`)).toBe(3);
+  });
+});
+
+describe('byProjectOrder', () => {
+  it('lists active, then paused, then shipped; newest update first within a status', () => {
+    const p = (id: string, status: 'active' | 'paused' | 'shipped', updated: string) => ({
+      id,
+      data: { status, updated: new Date(updated) },
+    });
+    const items = [
+      p('shipped-new', 'shipped', '2026-10-01'),
+      p('paused', 'paused', '2026-01-01'),
+      p('active-old', 'active', '2026-01-01'),
+      p('active-new', 'active', '2026-09-01'),
+    ];
+    expect([...items].sort(byProjectOrder).map((i) => i.id)).toEqual([
+      'active-new',
+      'active-old',
+      'paused',
+      'shipped-new',
+    ]);
   });
 });
