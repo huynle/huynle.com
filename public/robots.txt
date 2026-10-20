@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://huynle.com/sitemap-index.xml

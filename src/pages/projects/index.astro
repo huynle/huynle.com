@@ -1,0 +1,25 @@
+---
+import Base from '../../layouts/Base.astro';
+import SectionLabel from '../../components/SectionLabel.astro';
+import ProjectList from '../../components/ProjectList.astro';
+import { getProjects } from '../../lib/collections';
+
+const projects = await getProjects();
+const count = (s: string) => projects.filter((p) => p.data.status === s).length;
+---
+
+<Base title="Projects" description="Hardware and software projects by Huy Le, with their current status.">
+  <header class="wrap page-head">
+    <p class="kicker mono">02 — Projects</p>
+    <h1 class="page-head__title">Projects</h1>
+    <p class="page-head__lede">
+      What's on the bench. <span class="mono muted">{count('active')} active · {count('paused')} paused · {count('shipped')} shipped</span>
+    </p>
+  </header>
+  <section class="wrap section" aria-labelledby="project-index">
+    <SectionLabel n="Index" label="All projects" id="project-index" />
+    <div class="section__body">
+      <ProjectList projects={projects} />
+    </div>
+  </section>
+</Base>

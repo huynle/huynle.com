@@ -23,7 +23,7 @@ const projects = defineCollection({
     title: z.string(),
     status: z.enum(['active', 'paused', 'shipped']),
     summary: z.string(),
-    links: z.array(z.object({ label: z.string(), url: z.string().url() })).default([]),
+    links: z.array(z.object({ label: z.string(), url: z.url() })).default([]),
     updated: z.coerce.date(),
     /** Traces the card back to its Brain entry. Never rendered. */
     brainId: z.string(),

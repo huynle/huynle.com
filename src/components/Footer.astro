@@ -1,0 +1,18 @@
+---
+import { GITHUB_URL } from '../consts';
+
+const year = new Date().getUTCFullYear();
+---
+
+<footer class="site-footer">
+  <div class="wrap site-footer__inner">
+    <p class="site-footer__colophon">
+      Set in Fraunces, Geist &amp; JetBrains Mono. Static HTML, no tracking.
+    </p>
+    <ul class="site-footer__links">
+      <li><a href="/rss.xml">RSS</a></li>
+      <li><a href={GITHUB_URL} rel="me">GitHub</a></li>
+      <li><span>&copy; {year} Huy Le</span></li>
+    </ul>
+  </div>
+</footer>

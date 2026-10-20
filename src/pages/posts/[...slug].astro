@@ -1,0 +1,50 @@
+---
+import { render, type CollectionEntry } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import FormattedDate from '../../components/FormattedDate.astro';
+import { getPosts } from '../../lib/collections';
+import { readingTime } from '../../lib/content';
+
+export async function getStaticPaths() {
+  const posts = await getPosts();
+  return posts.map((post) => ({ params: { slug: post.id }, props: { post } }));
+}
+
+interface Props {
+  post: CollectionEntry<'posts'>;
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+const minutes = readingTime(post.body ?? '');
+---
+
+<Base title={post.data.title} description={post.data.summary} type="article">
+  <article class="wrap article">
+    <header class="article__head">
+      <p class="kicker mono">
+        <a href="/posts/">Writing</a> <span aria-hidden="true">/</span>
+        <FormattedDate date={post.data.date} /> <span aria-hidden="true">·</span>
+        {minutes} min read
+      </p>
+      <h1 class="article__title">{post.data.title}</h1>
+      <p class="article__dek">{post.data.summary}</p>
+      {
+        post.data.tags.length > 0 && (
+          <ul class="tags" aria-label="Tags">
+            {post.data.tags.map((t) => (
+              <li class="tag">#{t}</li>
+            ))}
+          </ul>
+        )
+      }
+    </header>
+    <div class="prose article__body">
+      <Content />
+    </div>
+    <footer class="article__foot mono">
+      <a href="/posts/"><span aria-hidden="true">←</span> All writing</a>
+      <a href="/rss.xml">RSS</a>
+    </footer>
+  </article>
+</Base>
