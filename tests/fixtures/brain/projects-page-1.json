@@ -1,0 +1,39 @@
+{
+  "entries": [
+    {
+      "id": "a1b2c3d4",
+      "path": "projects/site-operations/walkthrough/a1b2c3d4.md",
+      "title": "Project: Bench Scope",
+      "type": "walkthrough",
+      "status": "active",
+      "content": "# Project: Bench Scope\n\nA tiny oscilloscope front-end\nfor the bench.\n\nMore detail paragraph.\n\n## Links\n\n- [Source](https://github.com/huynle/bench-scope)\n- [Write-up](https://huynle.com/posts/bench-scope/)\n- [Internal note](projects/x/plan/abc.md)\n\n## Notes\n\nTrailing section.\n",
+      "tags": [
+        "public",
+        "site-project"
+      ],
+      "embedding_status": "current",
+      "project_id": "site-operations",
+      "created": "2026-10-01T08:00:00Z",
+      "modified": "2026-10-18T10:00:00Z"
+    },
+    {
+      "id": "e5f6g7h8",
+      "path": "projects/site-operations/walkthrough/e5f6g7h8.md",
+      "title": "Project: Old Thing",
+      "type": "walkthrough",
+      "status": "archived",
+      "content": "Retired.\n",
+      "tags": [
+        "public",
+        "site-project"
+      ],
+      "embedding_status": "current",
+      "project_id": "site-operations",
+      "created": "2026-10-01T08:00:00Z",
+      "modified": "2026-09-01T00:00:00Z"
+    }
+  ],
+  "total": 2,
+  "limit": 2,
+  "offset": 0
+}

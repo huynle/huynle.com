@@ -1,0 +1,23 @@
+{
+  "entries": [
+    {
+      "id": "q7r8s9t0",
+      "path": "projects/site-operations/walkthrough/q7r8s9t0.md",
+      "title": "Project: Dropped",
+      "type": "walkthrough",
+      "status": "cancelled",
+      "content": "Nope.\n",
+      "tags": [
+        "public",
+        "site-project"
+      ],
+      "embedding_status": "current",
+      "project_id": "site-operations",
+      "created": "2026-10-01T08:00:00Z",
+      "modified": "2026-08-15T09:00:00Z"
+    }
+  ],
+  "total": 1,
+  "limit": 2,
+  "offset": 4
+}
