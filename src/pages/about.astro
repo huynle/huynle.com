@@ -3,22 +3,47 @@ import Base from '../layouts/Base.astro';
 import { GITHUB_URL } from '../consts';
 ---
 
-<Base title="About" description="About Huy Le, a builder of hardware and software.">
+<Base
+  title="About"
+  description="About Huy Le: hardware and software, a homelab run as a personal platform, tools for working with AI agents, and trading research."
+>
   <header class="wrap page-head">
     <p class="kicker mono">04 — About</p>
     <h1 class="page-head__title">About</h1>
   </header>
   <section class="wrap section" aria-label="About Huy Le">
     <div class="section__body section__body--full prose prose--lead">
+      <!-- TODO(huy): one or two sentences of background: what you do for work, where you are, how you got here. -->
       <p>
-        I'm Huy Le. I build things on both sides of the hardware/software line: boards and bench instruments, the
-        firmware that runs on them, and the tools and infrastructure around them.
+        I'm Huy Le. I build things on both sides of the hardware/software line: microcontroller boards, 3D printers
+        running Klipper, a network KVM whose firmware I'm replacing, and the software and infrastructure around all of
+        it.
       </p>
       <p>
-        This site is my public notebook: a <a href="/now/">Now</a> snapshot, an index of <a href="/projects/">projects</a>,
-        and occasional <a href="/posts/">writing</a>. Placeholder copy; a proper introduction is coming.
+        Most of what I build runs on a homelab that I treat as a personal platform. It's a small k3s cluster that Flux
+        keeps in sync with a git repository. When I merge to <code>main</code> in an app's repo, CI builds an immutable
+        image and a commit to the infra repo rolls it out. Rolling back means reverting that commit. This site is
+        deployed the same way.
       </p>
-      <p>Code lives on <a href={GITHUB_URL} rel="me">GitHub</a>.</p>
+      <p>
+        A lot of my recent work is tooling for working with AI coding agents. <strong>Brain</strong> is my memory and
+        task system. Agents record decisions, plans and findings there, and a runner picks up queued tasks and works
+        them in git worktrees. <a href="https://github.com/huynle/hub">Hub</a> connects agent sessions on different
+        machines to one place, with a remote console, notifications and a voice mode I can use from my phone.{' '}
+        <a href="https://github.com/huynle/mcp-gateway">MCP gateway</a> puts the tools those agents use behind one
+        endpoint, with sign-in, per-tool policy and an approval step for anything that writes. A Supernote pipeline
+        gets my handwritten notes into Brain.
+      </p>
+      <p>
+        Separately, I build <a href="https://hdsight.dev">Hindsight</a>, a trading research platform. Signals and
+        strategies are defined in Python, backtests run on a Rust engine, and it connects to Interactive Brokers for
+        market data and orders.
+      </p>
+      <p>
+        This site is my public notebook: a <a href="/now/">Now</a> snapshot, an index of <a href="/projects/"
+          >projects</a
+        >, and occasional <a href="/posts/">writing</a>. Code lives on <a href={GITHUB_URL} rel="me">GitHub</a>.
+      </p>
     </div>
   </section>
 </Base>
